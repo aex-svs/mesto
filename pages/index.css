@@ -1,0 +1,22 @@
+/* normalize */
+
+@import url(../vendor/normalize.css);
+
+/*variables*/
+
+@import url(../vendor/variables.css);
+
+/* fonts */
+
+@import url(../fonts/fonts.css);
+
+/* root */
+
+@import url(../blocks/root/root.css);
+
+/* BEM mix*/
+
+@import url(../blocks/list-clear/list-clear.css);
+@import url(../blocks/btn-clear/btn-clear.css);
+
+/* footer */

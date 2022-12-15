@@ -1,0 +1,6 @@
+.container {
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+}
