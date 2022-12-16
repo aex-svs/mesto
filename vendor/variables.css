@@ -1,10 +1,11 @@
 :root {
     /*container*/
     --container-offset: 19px;
-    --container-width: 880px;
+    --container-width: 918px;
     /*color*/
-    --bg-color-dark: #000000;
-    --text-color: #ffffff;
+    --dark-color: #000000;
+    --light-color: #ffffff;
+    --color-grey: #545454;
     /*other*/
     --opacity: 0.6;
     --transition: 0.3s ease-in-out;

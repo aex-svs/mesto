@@ -1,6 +1,6 @@
 .root {
     font-family: "Inter", Arial, sans-serif;
     font-weight: 400;
-    color: var(--text-color);
-    background: var(--bg-color-dark);
+    color: var(--light-color);
+    background: var(--dark-color);
 }

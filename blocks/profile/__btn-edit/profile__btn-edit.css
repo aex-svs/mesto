@@ -1,0 +1,30 @@
+.profile__btn-edit {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--light-color);
+}
+
+.profile__btn-edit::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url(./../../../images/btn-edit.svg);
+}
+
+@media (max-width: 576px) {
+    .profile__btn-edit {
+        width: 18px;
+        height: 18px;
+    }
+    .profile__btn-edit::before {
+        width: 7.5px;
+        height: 7.5px;
+    }
+}

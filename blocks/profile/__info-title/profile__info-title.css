@@ -1,0 +1,13 @@
+.profile__info-title {
+    margin: 0;
+    font-weight: 500;
+    font-size: 42px;
+    line-height: 48px;
+}
+
+@media (max-width: 576px) {
+    .profile__info-title {
+        font-size: 27px;
+        line-height: 33px;
+    }
+}
