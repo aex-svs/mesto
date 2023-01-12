@@ -9,8 +9,8 @@ let profileJob = profileInfo.querySelector(".profile__subtitle");
 const popupBtnOpen = profileInfo.querySelector(".profile__btn-edit");
 
 // Open - close Modal
-let nameInput = popupForm.querySelector(".name__input");
-let jobInput = popupForm.querySelector(".job__input");
+let nameInput = popupForm.querySelector(".form-profile__input-name");
+let jobInput = popupForm.querySelector(".form-profile__input-job");
 
 function openPopup() {
   popupForm.classList.add("popup_active");
