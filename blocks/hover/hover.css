@@ -1,0 +1,6 @@
+.hover {
+  transition: var(--transition);
+}
+.hover:hover {
+  opacity: var(--opacity);
+}

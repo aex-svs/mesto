@@ -1,10 +1,14 @@
 .form-profile__btn-submit {
-    display: inline-flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    background-color: var(--dark-color);
-    color: var(--light-color);
-    border-radius: 2px;
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 18px;
+  background-color: var(--dark-color);
+  color: var(--light-color);
+  border-radius: 2px;
+  transition: var(--transition);
+}
+.form-profile__btn-submit:hover {
+  opacity: 0.8;
 }

@@ -1,9 +1,33 @@
-const popupForm = document.querySelector(".form-popup");
-const popupFormBtnClose = popupForm.querySelector(".form-popup__btn-close");
-const profileBtnEdit = document.querySelector(".profile__btn-edit");
+//popup
+const popupForm = document.querySelector(".popup");
+const popupFormBtnClose = popupForm.querySelector(".popup__btn-close");
 
-const popupVisibility = function() {
-    popupForm.classList.toggle("form-popup_active");
-};
+//profile
+const profileInfo = document.querySelector(".profile__info");
+let profileName = profileInfo.querySelector(".profile__info-title");
+let profileJob = profileInfo.querySelector(".profile__subtitle");
+const popupBtnOpen = profileInfo.querySelector(".profile__btn-edit");
 
-profileBtnEdit.addEventListener("click", popupVisibility);
+// Open - close Modal
+let nameInput = popupForm.querySelector(".name__input");
+let jobInput = popupForm.querySelector(".job__input");
+
+function openPopup() {
+  popupForm.classList.add("popup_active");
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+}
+function closePopup() {
+  popupForm.classList.remove("popup_active");
+}
+
+//popup input
+function handleFormSubmit(evt) {
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+}
+
+popupForm.addEventListener("submit", handleFormSubmit);
+popupBtnOpen.addEventListener("click", openPopup);
+popupFormBtnClose.addEventListener("click", closePopup);
