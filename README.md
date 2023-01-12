@@ -16,4 +16,4 @@
 
 **URL**
 
-- [Ссылка на проект](https://aex-svs.github.io/russian-travel/index.html)
+- [Ссылка на проект](https://aex-svs.github.io/mesto/index.html)
