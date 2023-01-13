@@ -24,6 +24,7 @@ function closePopup() {
 //popup input
 function handleFormSubmit(evt) {
   evt.preventDefault();
+
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
 }

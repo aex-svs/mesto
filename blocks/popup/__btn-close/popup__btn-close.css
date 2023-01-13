@@ -7,6 +7,7 @@
   background-image: url(./../../../images/btn-close.svg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 @media (max-width: 768px) {
   .popup__btn-close {
