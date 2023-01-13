@@ -8,7 +8,7 @@
 
 /* fonts */
 
-@import url(../fonts/fonts.css);
+@import url(../vendor/fonts/fonts.css);
 
 /* root */
 
@@ -75,5 +75,7 @@
 /*form-profile*/
 
 @import url(../blocks/form-profile/form-profile.css);
-@import url(../blocks/form-profile/__btn-submit/form-popup__btn-submit.css);
+@import url(../blocks/form-profile/__btn-submit/form-profile__btn-submit.css);
 @import url(../blocks/form-profile/__input/form-profile__input.css);
+@import url(../blocks/form-profile/__input/_type/form-profile__input_type_name.css);
+@import url(../blocks/form-profile/__input/_type/form-profile__input_type_job.css);

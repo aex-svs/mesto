@@ -6,7 +6,6 @@
   line-height: 22px;
   justify-content: center;
   align-items: center;
-  margin-top: 30px;
   background-color: var(--dark-color);
   color: var(--light-color);
   border-radius: 2px;
@@ -19,6 +18,5 @@
   .form-profile__btn-submit {
     font-size: 14px;
     line-height: 17px;
-    margin-top: 24px;
   }
 }
