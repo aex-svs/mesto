@@ -8,3 +8,10 @@
   background-repeat: no-repeat;
   background-position: center;
 }
+@media (max-width: 768px) {
+  .popup__btn-close {
+    right: 0;
+    width: 20px;
+    height: 20px;
+  }
+}

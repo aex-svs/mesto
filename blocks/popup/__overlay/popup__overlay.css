@@ -1,11 +1,17 @@
 .popup__overlay {
-    box-sizing: border-box;
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    min-height: 330px;
-    padding: 37px;
-    background-color: var(--light-color);
-    color: var(--dark-color);
-    border-radius: 10px;
+  box-sizing: border-box;
+  position: relative;
+  max-width: 430px;
+  width: 100%;
+  min-height: 330px;
+  padding: 37px;
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  border-radius: 10px;
+  margin: 0 19px;
+}
+@media (max-width: 768px) {
+  .popup__overlay {
+    padding: 25px 22px;
+  }
 }

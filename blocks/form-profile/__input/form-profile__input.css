@@ -1,9 +1,12 @@
 .form-profile__input {
-    padding: 13px 0;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 9px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 20px;
 }
 
 .form-profile__input:focus {
-    outline: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.9);
+  outline: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.9);
 }
