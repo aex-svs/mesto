@@ -1,4 +1,4 @@
-.popup__overlay {
+.popup__inner {
   box-sizing: border-box;
   position: relative;
   max-width: 430px;
@@ -11,7 +11,7 @@
   margin: 0 19px;
 }
 @media (max-width: 768px) {
-  .popup__overlay {
+  .popup__inner {
     padding: 25px 22px;
   }
 }
