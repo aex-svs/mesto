@@ -1,24 +1,24 @@
 //popup
-const popup = document.querySelector(".popup");
+const popupElement = document.querySelector(".popup");
 const popupFormEdit = document.querySelector(".popup-edit-profile");
 const popupAddElement = document.querySelector(".popup-add-element");
-const lightbox = document.querySelector(".popup-lightbox");
+const popupLightbox = document.querySelector(".popup-lightbox");
 const popupFormBtnClose = document.querySelectorAll(".popup__btn-close");
 
 //profile
-const profile = document.querySelector(".profile");
-const profileName = profile.querySelector(".profile__info-title");
-const profileJob = profile.querySelector(".profile__subtitle");
-const popupBtnOpenProfile = profile.querySelector(".profile__btn-edit");
+const profileElement = document.querySelector(".profile");
+const profileName = profileElement.querySelector(".profile__info-title");
+const profileJob = profileElement.querySelector(".profile__subtitle");
+const popupBtnOpenProfile = profileElement.querySelector(".profile__btn-edit");
 
 //cardTamplete
 
-const template = document.getElementById("element_card");
+const templateElement = document.getElementById("element_card");
 const elementList = document.querySelector(".elements__list");
 
 //create item
 
-const elementAdd = profile.querySelector(".profile__btn-add");
+const elementAdd = profileElement.querySelector(".profile__btn-add");
 const formCreate = document.querySelector(".form-add-element");
 const formCreateTitle = formCreate.querySelector(".form__input_type_title");
 const formCreateLink = formCreate.querySelector(".form__input_type_link");
@@ -30,49 +30,49 @@ const lightboxTitle = document.querySelector(".popup__figure-title");
 
 // Open - close Modal
 const formProfileEdit = document.querySelector(".form-profile");
-const nameInput = popupFormEdit.querySelector(".form__input_type_name");
-const jobInput = popupFormEdit.querySelector(".form__input_type_job");
+const formProfileNameInput = popupFormEdit.querySelector(".form__input_type_name");
+const formProfilejobInput = popupFormEdit.querySelector(".form__input_type_job");
 
-const openPopup = function (popup) {
-  popup.classList.add("popup_active");
+const openPopup = function (popupElement) {
+  popupElement.classList.add("popup_active");
 }
 
-const closePopup = function (popup) {
-  popup.classList.remove("popup_active");
+const closePopup = function (popupElement) {
+  popupElement.classList.remove("popup_active");
 
 }
 
 popupFormBtnClose.forEach((btn) => {
-  const popup = btn.closest(".popup");
-  btn.addEventListener("click", () => closePopup(popup));
+  const popupElement = btn.closest(".popup");
+  btn.addEventListener("click", () => closePopup(popupElement));
 });
 
 //popup input
 
 const insertInputProfile = () => {
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
+  formProfileNameInput.value = profileName.textContent;
+  formProfilejobInput.value = profileJob.textContent;
 }
 
 insertInputProfile(popupFormEdit)
 
 function handleFormSubmit(evt) {
   evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileJob.textContent = jobInput.value;
+  profileName.textContent = formProfileNameInput.value;
+  profileJob.textContent = formProfilejobInput.value;
   closePopup(popupFormEdit);
 }
 
 // new code
 
-const newItemElement = (item) => {
-  const newItemElement = template.content.cloneNode(true);
-  const deleteBtn = newItemElement.querySelector(".element__btn-delete");
+const createNewItemElement = (item) => {
+  const createNewItemElement = templateElement.content.cloneNode(true);
+  const deleteBtn = createNewItemElement.querySelector(".element__btn-delete");
   deleteBtn.addEventListener("click", deleteItem);
-  const likeBtn = newItemElement.querySelector(".element__btn-like");
+  const likeBtn = createNewItemElement.querySelector(".element__btn-like");
   likeBtn.addEventListener("click", likeItem);
-  const newItemTitle = newItemElement.querySelector(".element__title");
-  const newItemLink = newItemElement.querySelector(".element__img");
+  const newItemTitle = createNewItemElement.querySelector(".element__title");
+  const newItemLink = createNewItemElement.querySelector(".element__img");
   newItemTitle.textContent = item.name;
   newItemLink.src = item.link;
   newItemLink.alt = item.name;
@@ -81,10 +81,10 @@ const newItemElement = (item) => {
     lightboxImg.alt = item.name
     lightboxTitle.textContent = item.name;
 
-    openPopup(lightbox)
+    openPopup(popupLightbox)
   })
 
-  return newItemElement;
+  return createNewItemElement;
 }
 
 const deleteItem = (evt) => {
@@ -103,7 +103,7 @@ const handleFormAddSubmit = (evt) => {
     link: formCreateLink.value
   }
 
-  elementList.prepend(newItemElement(addCreateElement))
+  elementList.prepend(createNewItemElement(addCreateElement))
 
   formCreate.reset()
 
@@ -111,12 +111,12 @@ const handleFormAddSubmit = (evt) => {
 }
 
 //render
-const renderItem = (wrap, evt) => {
-  wrap.append(newItemElement(evt));
+const renderInitialCards = (wrap, evt) => {
+  wrap.append(createNewItemElement(evt));
 }
 
 initialCards.forEach((evt) => {
-  renderItem(elementList, evt);
+  renderInitialCards(elementList, evt);
 })
 
 popupBtnOpenProfile.addEventListener("click", () => {
