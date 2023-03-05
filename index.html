@@ -27,16 +27,13 @@
         <button type="button" class="profile__btn-add btn-clear hover"></button>
       </section>
       <section class="elements">
-        <ul class="elements__list list-clear">
-
-        </ul>
+        <ul class="elements__list list-clear"></ul>
       </section>
     </main>
     <footer class="footer">
       <p class="footer__copyright" lang="en">© 2020 Mesto Russia</p>
     </footer>
   </div>
-
 
   <!--template cards-->
   <template id="element_card">
@@ -78,22 +75,22 @@
   </div>
   <!-- Modal form-element-add  end -->
 
-
-
   <!--Modal form-profile -->
   <div class="popup popup-edit-profile">
     <div class="popup__inner">
       <button type="button" class="popup__btn-close btn-clear"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
       <form method="post" class="form form-profile" name="form__profile">
-        <input class="form__input form__input_type_name input-clear" type="text" name="name">
-        <input class="form__input form__input_type_job input-clear" type="text" name="job">
+        <input class="form__input form__input_type_name input-clear" type="text" name="name" placeholder="Имя">
+        <input class="form__input form__input_type_job input-clear" type="text" name="job"
+          placeholder="Вид деятельности">
         <button type="submit" class="form__btn-submit btn-clear">Сохранить</button>
       </form>
     </div>
   </div>
   <!--Modal form-profile  end-->
 
+  <script defer src="constants/cards.js"></script>
   <script defer src="scripts/script.js"></script>
 </body>
 
