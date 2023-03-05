@@ -83,10 +83,10 @@
 
 /*form-profile*/
 
-@import url(../blocks/form-profile/form-profile.css);
-@import url(../blocks/form-profile/__btn-submit/form-profile__btn-submit.css);
-@import url(../blocks/form-profile/__input/form-profile__input.css);
-@import url(../blocks/form-profile/__input/_type/form-profile__input_type_name.css);
-@import url(../blocks/form-profile/__input/_type/form-profile__input_type_job.css);
-@import url(../blocks/form-profile/__input/_type/form-profile__input_type_title.css);
-@import url(../blocks/form-profile/__input/_type/form-profile__input_type_link.css);
+@import url(../blocks/form/form.css);
+@import url(../blocks/form/__btn-submit/form__btn-submit.css);
+@import url(../blocks/form/__input/form__input.css);
+@import url(../blocks/form/__input/_type/form__input_type_name.css);
+@import url(../blocks/form/__input/_type/form__input_type_job.css);
+@import url(../blocks/form/__input/_type/form__input_type_title.css);
+@import url(../blocks/form/__input/_type/form__input_type_link.css);

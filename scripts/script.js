@@ -27,9 +27,9 @@ const initialCards = [
 //popup
 const popup = document.querySelector(".popup");
 
-const popupFormEdit = document.querySelector(".popup-edit__profile");
+const popupFormEdit = document.querySelector(".popup-edit-profile");
 
-const popupAddElement = document.querySelector(".popup__add-element");
+const popupAddElement = document.querySelector(".popup-add-element");
 
 const lightbox = document.querySelector(".popup-lightbox");
 
@@ -52,8 +52,8 @@ const elementList = document.querySelector(".elements__list");
 const elementAdd = profile.querySelector(".profile__btn-add");
 
 const formCreate = document.querySelector(".form-add-element");
-const formCreateTitle = formCreate.querySelector(".form-profile__input_type_title");
-const formCreateLink = formCreate.querySelector(".form-profile__input_type_link");
+const formCreateTitle = formCreate.querySelector(".form__input_type_title");
+const formCreateLink = formCreate.querySelector(".form__input_type_link");
 
 
 //popup lightbox
@@ -62,8 +62,8 @@ const lightboxImg = document.querySelector(".popup__figure-img");
 const lightboxTitle = document.querySelector(".popup__figure-title");
 
 // Open - close Modal
-let nameInput = popupFormEdit.querySelector(".form-profile__input_type_name");
-let jobInput = popupFormEdit.querySelector(".form-profile__input_type_job");
+let nameInput = popupFormEdit.querySelector(".form__input_type_name");
+let jobInput = popupFormEdit.querySelector(".form__input_type_job");
 
 const openPopup = function (popup) {
   popup.classList.add("popup_active");
