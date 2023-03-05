@@ -29,6 +29,7 @@ const lightboxImg = document.querySelector(".popup__figure-img");
 const lightboxTitle = document.querySelector(".popup__figure-title");
 
 // Open - close Modal
+const formProfileEdit = document.querySelector(".form-profile");
 const nameInput = popupFormEdit.querySelector(".form__input_type_name");
 const jobInput = popupFormEdit.querySelector(".form__input_type_job");
 
@@ -38,6 +39,7 @@ const openPopup = function (popup) {
 
 const closePopup = function (popup) {
   popup.classList.remove("popup_active");
+
 }
 
 popupFormBtnClose.forEach((btn) => {
@@ -117,7 +119,13 @@ initialCards.forEach((evt) => {
   renderItem(elementList, evt);
 })
 
-popupBtnOpenProfile.addEventListener("click", () => openPopup(popupFormEdit));
-elementAdd.addEventListener("click", () => openPopup(popupAddElement));
+popupBtnOpenProfile.addEventListener("click", () => {
+  openPopup(popupFormEdit);
+  formProfileEdit.reset();
+});
+elementAdd.addEventListener("click", () => {
+  openPopup(popupAddElement);
+  formCreate.reset();
+});
 popupFormEdit.addEventListener("submit", handleFormSubmit);
 popupAddElement.addEventListener("submit", handleFormAddSubmit);
