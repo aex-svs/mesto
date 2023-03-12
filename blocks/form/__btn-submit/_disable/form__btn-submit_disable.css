@@ -1,0 +1,6 @@
+.form__btn-submit_disable{
+  background-color: var(--light-color);
+  border: 1px solid rgba(0, 0, 0, .2);
+  color: rgba(0, 0, 0, .2);
+  cursor: default;
+}

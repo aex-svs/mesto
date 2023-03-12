@@ -84,9 +84,11 @@
 /*form-profile*/
 
 @import url(../blocks/form/form.css);
+@import url(../blocks/form/__fieldset/form__fieldset.css);
 @import url(../blocks/form/__btn-submit/form__btn-submit.css);
 @import url(../blocks/form/__input/form__input.css);
-@import url(../blocks/form/__input/_type/form__input_type_name.css);
-@import url(../blocks/form/__input/_type/form__input_type_job.css);
-@import url(../blocks/form/__input/_type/form__input_type_title.css);
-@import url(../blocks/form/__input/_type/form__input_type_link.css);
+@import url(../blocks/form/__label/form__label.css);
+@import url(../blocks/form/__input/_error/form__input-error.css);
+@import url(../blocks/form/__input-message/form__input-message.css);
+@import url(../blocks/form/__input-message/_visible/form__input-message_visible.css);
+@import url(../blocks/form/__btn-submit/_disable/form__btn-submit_disable.css);

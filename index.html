@@ -51,7 +51,7 @@
   <!-- popup image -->
   <div class="popup popup-lightbox">
     <div class="popup-lightbox__inner">
-      <button type="button" class="popup__btn-close btn-clear"></button>
+      <button type="button" class="popup__btn-close btn-clear hover"></button>
       <figure class="popup__figure">
         <img src="#" alt="#" class="popup__figure-img">
         <figcaption class="popup__figure-title"></figcaption>
@@ -63,13 +63,22 @@
   <!-- Modal form-element-add -->
   <div class="popup popup-add-element">
     <div class="popup__inner">
-      <button type="button" class="popup__btn-close btn-clear"></button>
+      <button type="button" class="popup__btn-close btn-clear hover"></button>
       <h2 class="popup__title">Новое место</h2>
-      <form method="post" class="form form-add-element" name="form__create">
-        <input class="form__input form__input_type_title input-clear" type="text" name="title" placeholder="Название">
-        <input class="form__input form__input_type_link input-clear" type="text" name="link"
-          placeholder="Ссылка на картинку">
-        <button type="submit" class="form__btn-submit btn-clear">Создать</button>
+      <form method="post" class="form form-add-element" name="form__create" novalidate>
+        <fieldset class="form__fieldset">
+          <label class="form__label">
+            <input id="input-title" class="form__input form__input_type_title input-clear" type="text" name="title"
+              placeholder="Название" minlength="2" maxlength="30" required>
+            <span class="form__input-message input-title-error"></span>
+          </label>
+          <label class="form__label">
+            <input id="input-image" class="form__input form__input_type_link input-clear" type="url" name="link"
+              placeholder="Ссылка на картинку" required>
+            <span class="form__input-message input-image-error"></span>
+          </label>
+          <button type="submit" class="form__btn-submit btn-clear">Создать</button>
+        </fieldset>
       </form>
     </div>
   </div>
@@ -78,19 +87,29 @@
   <!--Modal form-profile -->
   <div class="popup popup-edit-profile">
     <div class="popup__inner">
-      <button type="button" class="popup__btn-close btn-clear"></button>
+      <button type="button" class="popup__btn-close btn-clear hover"></button>
       <h2 class="popup__title">Редактировать профиль</h2>
-      <form method="post" class="form form-profile" name="form__profile">
-        <input class="form__input form__input_type_name input-clear" type="text" name="name" placeholder="Имя">
-        <input class="form__input form__input_type_job input-clear" type="text" name="job"
-          placeholder="Вид деятельности">
-        <button type="submit" class="form__btn-submit btn-clear">Сохранить</button>
+      <form method="post" class="form form-profile" name="form__profile" novalidate>
+        <fieldset class="form__fieldset">
+          <label class="form__label">
+            <input id="input-name" class="form__input form__input_type_name input-clear" type="text" name="name"
+              placeholder="Имя" minlength="2" maxlength="40">
+            <span class="form__input-message input-name-error"></span>
+          </label>
+          <label class="form__label">
+            <input id="input-job" class="form__input form__input_type_job input-clear" type="text" name="job"
+              placeholder="Вид деятельности" minlength="2" maxlength="200">
+            <span class="form__input-message input-job-error"></span>
+          </label>
+          <button type="submit" class="form__btn-submit btn-clear">Сохранить</button>
+        </fieldset>
       </form>
     </div>
   </div>
   <!--Modal form-profile  end-->
-
-  <script defer src="constants/cards.js"></script>
+  <script defer src="options/variables.js"></script>
+  <script defer src="options/validate.js"></script>
+  <script defer src="options/cards.js"></script>
   <script defer src="scripts/script.js"></script>
 </body>
 
